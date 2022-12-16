@@ -3,5 +3,5 @@
 
 ## 导入
 ```
-https://raw.githubcontent.com/atomjayle/master/QuantumultX.conf
+https://raw.githubusercontent.com/atomjaylee/QuanXConfig/master/QuantumultX.conf
 ```
