@@ -3,8 +3,12 @@
   "description": "By atomjaylee",
   "icons": [
     {
-      "name": "full_blue",
-      "url": "https://raw.githubusercontent.com/atomjaylee/QuanXConfig/main/icon/logo.png"
+      "name": "full_round",
+      "url": "https://raw.githubusercontent.com/atomjaylee/QuanXConfig/main/icon/logo_round.png"
+    },
+    {
+      "name": "full_circle",
+      "url": "https://raw.githubusercontent.com/atomjaylee/QuanXConfig/main/icon/logo_circle.png"
     }
   ]
 }
