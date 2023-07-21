@@ -1,6 +1,10 @@
-{"name":"ATOM icons", 
-"description":"By atomjaylee", 
-"icons":[
-    {"name":"full_blue", "url":"https://raw.githubusercontent.com/atomjaylee/QuanXConfig/main/icon/logo.svg"},
+{
+  "name": "ATOM icons",
+  "description": "By atomjaylee",
+  "icons": [
+    {
+      "name": "full_blue",
+      "url": "https://raw.githubusercontent.com/atomjaylee/QuanXConfig/main/icon/logo.png"
+    }
   ]
 }
