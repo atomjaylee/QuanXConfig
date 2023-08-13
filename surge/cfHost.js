@@ -3,9 +3,9 @@ const ssid = $network.wifi.ssid;
 if (ssid == "Kikyo") {
   $done({ address: "173.245.49.134", ttl: 600 });
 } else if (ssid == "atomjaylee") {
-  $done({ address: "162.159.134.118", ttl: 600 });
+  $done({ address: "162.159.129.213", ttl: 600 });
 } else if (ssid == null) {
-  $done({ address: "162.159.134.118", ttl: 600 });
+  $done({ address: "162.159.129.213", ttl: 600 });
 } else {
   $done({});
 }
