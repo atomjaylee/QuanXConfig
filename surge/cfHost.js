@@ -5,7 +5,7 @@ if (ssid == "Kikyo") {
 } else if (ssid == "atomjaylee" || ssid == "atomjaylee_5G") {
   $done({ address: "104.18.124.62", ttl: 600 });
 } else if (ssid == null) {
-  $done({ address: "162.159.134.16", ttl: 600 });
+  $done({ address: "104.18.124.62", ttl: 600 });
 } else {
   $done({});
 }
