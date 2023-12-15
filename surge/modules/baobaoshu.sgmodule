@@ -1,0 +1,20 @@
+#!name= 宝宝树孕育
+#!desc= 宝宝树孕育 - 移除广告
+
+[URL Rewrite]
+# 首页活动弹窗,签到图标
+^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(index_activity\/get_app_index_activity|sign\/sign_h_5)\? - reject
+# 搜索框填充词
+^http:\/\/go\.babytree\.com\/go_search\/api\/mobile_search_new\/get_multi_search_default_keywords\? - reject
+# 新客专享红包
+^http:\/\/pic08\.babytreeimg\.com\/knowledge\/2022\/0923\/\w+ - reject
+# 开屏广告
+^http:\/\/plough\.babytree\.com\/plough\.do - reject
+
+[Script]
+整体配置 = type=http-response,pattern=^http:\/\/api\.babytree\.com\/bafconfigcenter_intf\/config\/get\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/babytree.js
+搜索列表 = type=http-response,pattern=^http:\/\/go\.babytree\.com\/go_search\/api\/mobile_search_new\/search_index,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/babytree.js
+页面布局 = type=http-response,pattern=^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(app_index\/get_app_tab|cms_column\/get_column_list|feeds\/get_index_feeds_list|user\/get_user_info)\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/babytree.js
+
+[MITM]
+hostname = %APPEND% *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
