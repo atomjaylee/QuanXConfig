@@ -1,0 +1,24 @@
+#!name= 宝宝树孕育
+#!desc= 宝宝树孕育 - 移除广告
+
+[URL Rewrite]
+# 首页活动弹窗,签到图标
+^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(index_activity\/get_app_index_activity|sign\/sign_h_5)\? - reject
+# 广告样式
+^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo - reject
+^https:\/\/mappsv5\.caixin\.com\/channelv5\/article_ad_ios_info\.json - reject
+# 文章中间推广,文章底部相关阅读
+^https:\/\/gg\.caixin\.com\/s\?z=caixin&slot=\d+ - reject
+# 首页弹出框
+^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist - reject
+
+[Script]
+财新数据通 = type=http-response,pattern=^https:\/\/entities\.caixin\.com\/api\/dataplus\/columns,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+会员解锁 = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/auth\/(groupImageValidate|validate|validateAudioAuth),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+文章底部广告 = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/(caixinapp\/appinfo|search\/getkeyword),script-path=hhttps://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+财新FM = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-content\/fm\/index\/list\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+文章中间推广 = type=http-response,pattern=^https:\/\/mappsv5\.caixin\.com\/articlev5\/\d+\/\d+\.json,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+文章底部相关阅读 = type=http-response,pattern=^https:\/\/mapps?v5\.caixin\.com\/(channelv5\/list|\/?index_page_v5\/)\w+,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+
+[MITM]
+hostname = %APPEND% e*.caixin.com, g*.caixin.com, m*.caixin.com

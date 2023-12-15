@@ -17,4 +17,4 @@
 页面布局 = type=http-response,pattern=^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(app_index\/get_app_tab|cms_column\/get_column_list|feeds\/get_index_feeds_list|user\/get_user_info)\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/babytree.js
 
 [MITM]
-hostname = %APPEND% *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+hostname = %APPEND% *.babytree.com
