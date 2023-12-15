@@ -1,0 +1,8 @@
+#!name= 美图秀秀
+#!desc= 解锁美图秀秀的SVIP权限
+
+[Script]
+美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
+
+[MITM]
+hostname = %APPEND% *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
