@@ -14,7 +14,7 @@
 
 [Script]
 财新数据通 = type=http-response,pattern=^https:\/\/entities\.caixin\.com\/api\/dataplus\/columns,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
-会员解锁 = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/auth\/(groupImageValidate|validate|validateAudioAuth),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
+会员解锁 = type=http-request,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/auth\/(groupImageValidate|validate|validateAudioAuth),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
 文章底部广告 = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/(caixinapp\/appinfo|search\/getkeyword),script-path=hhttps://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
 财新FM = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/app-content\/fm\/index\/list\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
 文章中间推广 = type=http-response,pattern=^https:\/\/mappsv5\.caixin\.com\/articlev5\/\d+\/\d+\.json,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js
