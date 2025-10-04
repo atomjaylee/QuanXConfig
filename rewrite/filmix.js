@@ -1,13 +1,13 @@
 var anye = JSON.parse($response.body)
 anye = {
     "userprofile_id": "_42a87dba768b4b7e7300b54f9e15397a",
-    "nickname": "Filmixer_4a70ea",
+    "nickname": "七个老头，八个蛋",
     "nickname_last_changed_at": null,
     "is_vip": true,
-    "vip_level": 9,
+    "vip_level": 1,
     "user": {
         "id": 13534,
-        "username": "七个老头",
+        "username": "出吊奇",
         "email": "",
         "is_active": true
     },
