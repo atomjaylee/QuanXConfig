@@ -1,0 +1,10 @@
+#!name=贝乐虎古诗 · 本地课程与会员状态
+#!desc=根据贝乐虎古诗 5.8.2 抓包制作的响应改写试验版。处理课程 free/unlockStatus、userData.bought/expiretime 和现有 supervip 的 expireDate。需启用 MITM 与脚本；服务端权限及付费内容播放未验证。此文件引用本机 outputs 中的配套 JS，移动文件或换设备时请修改 script-path。
+#!system=mac
+
+[Script]
+ubestkid-local-course = type=http-response, pattern=^https://aicblhapp\.ubestkid\.com/course/get[A-Za-z0-9_]+(?:\?[^#]*)?$, requires-body=true, max-size=2097152, timeout=5, script-path=/Users/atomjaylee/Documents/Codex/2026-11-08/wo-x/outputs/ubestkid-local.js
+ubestkid-local-profile = type=http-response, pattern=^https://uc\.ubestkid\.com/web/user/getUserProfile(?:\?[^#]*)?$, requires-body=true, max-size=2097152, timeout=5, script-path=/Users/atomjaylee/Documents/Codex/2026-11-08/wo-x/outputs/ubestkid-local.js
+
+[MITM]
+hostname = %APPEND% aicblhapp.ubestkid.com, uc.ubestkid.com
