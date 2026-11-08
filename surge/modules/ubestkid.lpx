@@ -1,0 +1,16 @@
+#!name = 贝乐虎古诗 · 本地课程与会员状态
+#!desc = 响应数据处理插件；需要启用脚本、MitM，并安装及信任证书。
+#!author = atomjaylee
+#!homepage = https://github.com/atomjaylee/QuanXConfig
+#!system = iOS,iPadOS
+#!loon_version = 3.5.1(983)
+#!date = 2026-11-08
+#!type = normal
+
+[Script]
+response if ${url} ~= /^https:\/\/aicblhapp\.ubestkid\.com\/course\/get[A-Za-z0-9_]+(?:\?[^#]*)?$/ then script("https://raw.githubusercontent.com/atomjaylee/QuanXConfig/refs/heads/main/surge/modules/ubestkid-local.js") with tag="贝乐虎课程响应", timeout=20, requires_body=true
+
+response if ${url} ~= /^https:\/\/uc\.ubestkid\.com\/web\/user\/getUserProfile(?:\?[^#]*)?$/ then script("https://raw.githubusercontent.com/atomjaylee/QuanXConfig/refs/heads/main/surge/modules/ubestkid-local.js") with tag="贝乐虎用户响应", timeout=20, requires_body=true
+
+[Mitm]
+hostname = aicblhapp.ubestkid.com, uc.ubestkid.com
