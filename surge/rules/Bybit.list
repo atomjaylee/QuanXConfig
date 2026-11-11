@@ -1,0 +1,33 @@
+# NAME: Bybit
+# DESC: Bybit 分流规则集 (Surge RULE-SET)
+# UPDATED: 2026-11-10
+# SOURCE: dler-io/Rules PR #120 (v2fly geosite:bybit), hilyfux/surge-rules, KaylaONeal/surge-config
+#
+# 用法 (在主配置 [Rule] 中引用，放在 ChinaMax / GEOIP,CN 之前):
+#   RULE-SET,<本文件的链接>,Bybit
+#
+# 注意:
+#   1. Bybit 的 API / CDN / 静态资源使用不含 "bybit" 的域名，不要只写 DOMAIN-KEYWORD
+#   2. Bybit 限制美国、新加坡等地区，出口请选受支持地区节点，并保持前端与接口出口一致
+
+# --- 主站 / 镜像 ---
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybit.cloud
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit.global
+
+# --- API / 行情 / WebSocket ---
+DOMAIN-SUFFIX,bytick.com
+DOMAIN-SUFFIX,by-tick.com
+DOMAIN-SUFFIX,byapis.com
+
+# --- 登录 / CDN / 静态资源 ---
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,bycbe.com
+DOMAIN-SUFFIX,bymj.io
+DOMAIN-SUFFIX,byabcde.com
+DOMAIN-SUFFIX,byapps.net
+DOMAIN-SUFFIX,byd3c3.com
+DOMAIN-SUFFIX,bybdc6.com
